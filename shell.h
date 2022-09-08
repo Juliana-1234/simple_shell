@@ -8,8 +8,5 @@
 #include <sys/wait.h>
 #include <string.h>
 
-int prompt(void);
-void _getline(char *c);
-int _fork(void);
 
 #endif /* SHELL_H */
