@@ -1,5 +1,9 @@
 #include "shell.h"
 
+/**
+ * main - Entry point
+ * Return: 0
+ */
 int main(void)
 {
 	char cmd[100], *command = NULL, *parameters[20];

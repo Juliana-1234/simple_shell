@@ -9,7 +9,7 @@
 #include <string.h>
 
 int prompt(void);
-void _getline(char *);
-int _fork();
+void _getline(char *c);
+int _fork(void);
 
-#endif
+#endif /* SHELL_H */
