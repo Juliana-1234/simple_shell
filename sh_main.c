@@ -26,8 +26,7 @@ int main(int ac, char *av[], char **env)
 			free(string);
 			continue;
 		}
-		if (_strcmp(string, "exit") != 0)
-			shell_exit(string);
+
 		flagsc = built_in(string, env);
 		if (flagsc == 1)
 			continue;

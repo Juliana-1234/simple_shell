@@ -10,7 +10,7 @@
 
 int built_in(char *strtocmp, char **env_link)
 {
-	int i = 0, temp = 0, status;
+	int i = 0, temp = 0;
 	char *esc = "exit", *e_var = "env";
 
 	while (strtocmp[i] && esc[i])
@@ -21,9 +21,8 @@ int built_in(char *strtocmp, char **env_link)
 	}
 	if (temp == 0)
 	{
-		status = _atoi(strtocmp + (i + 1));
 		free(strtocmp);
-		exit(status);
+		exit(EXIT_SUCCESS);
 	}
 	else
 	{
