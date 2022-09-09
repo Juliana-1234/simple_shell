@@ -6,16 +6,16 @@
  * Return: Nothing.
  */
 
-void shell_exit(char **token)
+void shell_exit(char *token)
 {
 	int status = 0;
 
-	if (token[1] == NULL)
+	if (token == NULL)
 	{
 		free(token);
 		exit(EXIT_SUCCESS);
 	}
-	status = _atoi(token[1]);
+	status = _atoi(token);
 	free(token);
 	exit(status);
 }

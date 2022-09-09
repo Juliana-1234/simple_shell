@@ -26,6 +26,8 @@ int main(int ac, char *av[], char **env)
 			free(string);
 			continue;
 		}
+		if (_strcmp(string, "exit") != 0)
+			shell_exit(string);
 		flagsc = built_in(string, env);
 		if (flagsc == 1)
 			continue;
@@ -36,8 +38,6 @@ int main(int ac, char *av[], char **env)
 			freezer(token, string);
 			continue;
 		}
-		if (_strcmp(token[0], "exit") != 0)
-			shell_exit(token);
 		childhood(token, av, env, string);
 		wait(NULL);
 	}
