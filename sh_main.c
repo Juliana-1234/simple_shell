@@ -36,6 +36,8 @@ int main(int ac, char *av[], char **env)
 			freezer(token, string);
 			continue;
 		}
+		if (_strcmp(token[0], "exit") != 0)
+			shell_exit(token);
 		childhood(token, av, env, string);
 		wait(NULL);
 	}
