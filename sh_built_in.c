@@ -10,7 +10,8 @@
 
 int built_in(char *strtocmp, char **env_link)
 {
-	int i = 0, temp = 0;
+	int i = 0, temp = 0:q
+		;
 	char *esc = "exit", *e_var = "env";
 
 	while (strtocmp[i] && esc[i])
